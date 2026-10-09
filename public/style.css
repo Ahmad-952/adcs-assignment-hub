@@ -102,16 +102,6 @@ html, body { min-height: 100%; font-family: 'Syne', system-ui, sans-serif; backg
 .contribute-btn:hover { filter: brightness(1.08); transform: translateY(-2px); }
 
 /* toast notification */
-#toast {
-  position: fixed; top: 18px; right: 18px; z-index: 200; max-width: 340px;
-  background: linear-gradient(135deg,#1e293b,#0f172a); color: var(--text);
-  border: 1px solid rgba(59,130,246,0.5); border-left: 4px solid var(--accent);
-  padding: 14px 18px; border-radius: 12px; font-size: 13px; font-weight: 600;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.55); opacity: 0; transform: translateY(-12px);
-  transition: opacity .3s, transform .3s; pointer-events: none;
-}
-#toast.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
-
 /* Gmail-style notification bell + panel */
 #notifBell {
   position: fixed; top: 14px; right: 16px; z-index: 150; cursor: pointer;
@@ -336,5 +326,5 @@ html, body { min-height: 100%; font-family: 'Syne', system-ui, sans-serif; backg
   content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
   color: #f0c040; font-size: 18px; font-weight: 800;
 }
-.faq-item[open] summary::after { content: "–"; }
+.faq-item[open] summary::after { content: "ï¿½"; }
 .faq-item p { margin-top: 10px; margin-bottom: 0; }

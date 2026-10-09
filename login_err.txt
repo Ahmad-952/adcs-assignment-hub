@@ -1,0 +1,15 @@
+Vercel CLI 62.2.0 (Node.js 24.21.0)
+> Temporary deployments aren't available for this attempt. Log in to continue.
+> No existing credentials found. Starting login flow...
+> 
+  Visit https://vercel.com/oauth/device?user_code=RZTP-RHGW
+
+Waiting for authentication...
+[2K[1A[2K[G> Success! Logged in.
+Loading teams…
+
+  Directory       ~\Desktop\ADCS ASSIGNMENT
+
+Searching for existing projects…
+Error: Project names can be up to 100 characters long and must be lowercase. They can include letters, digits, and the following characters: '.', '_', '-'. However, they cannot contain the sequence '---'. (400)
+Learn More: https://vercel.com/docs/projects/overview#project-name

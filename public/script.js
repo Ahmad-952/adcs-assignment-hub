@@ -319,25 +319,12 @@ document.getElementById("modalBackdrop").addEventListener("click", e => {
 document.addEventListener("keydown", e => { if(e.key==="Escape") { closeModal(); closeAuthOverlay(); closeUploadOverlay(); } });
 
 /* ─── NOTIFICATIONS (new assignment uploaded) ─── */
-function showToast(msg) {
-  let t = document.getElementById("toast");
-  if (!t) {
-    t = document.createElement("div");
-    t.id = "toast";
-    document.body.appendChild(t);
-  }
-  t.textContent = msg;
-  t.classList.add("show");
-  clearTimeout(t._hide);
-  t._hide = setTimeout(() => t.classList.remove("show"), 6000);
-}
-
 function askNotificationPermission() {
   if (!("Notification" in window)) return;
   if (Notification.permission === "default") Notification.requestPermission();
 }
+// ask only on the visitor's first click (never auto-pop on page load)
 document.addEventListener("click", askNotificationPermission, { once: true });
-window.addEventListener("load", () => setTimeout(askNotificationPermission, 1500));
 
 /* ─── PUSH SUBSCRIPTION (real notifications on mobile, even closed) ─── */
 const VAPID_PUBLIC_KEY = "BI4JV-0mUc-lylpBOXcwrfxDZPx74VKQ7pCF8TdwlDKz55LPvJMC75e7uK7nBrjbFxFRp42Lwf6RVuuL-s7xqzA";
@@ -367,27 +354,18 @@ async function subscribePush() {
     });
   } catch (e) { console.error("Push subscribe failed:", e); }
 }
-window.addEventListener("load", () => setTimeout(async () => {
-  askNotificationPermission();
-  // re-check permission after user possibly granted it
-  setTimeout(subscribePush, 4000);
-}, 1500));
+window.addEventListener("load", () => setTimeout(subscribePush, 3000));
 document.addEventListener("click", () => setTimeout(subscribePush, 1000), { once: true });
 
 function notifyAll(newest) {
-  const title = "🔔 New Assignment Uploaded";
-  const body  = `${newest.name} — ${newest.subject} / ${newest.folder}`;
-  showToast(`🔔 New assignment: ${newest.name} — ${newest.subject} / ${newest.folder}`);
-  // Gmail-style inbox notification
+  const body = `${newest.name} — ${newest.subject} / ${newest.folder}`;
+  // One channel only: the Gmail-style bell inbox (system push is sent by the server)
   try {
     const list = JSON.parse(localStorage.getItem("adcsNotifs") || "[]");
     list.unshift({ title: newest.name, body, time: newest.time });
     localStorage.setItem("adcsNotifs", JSON.stringify(list.slice(0, 20)));
     renderNotifPanel();
   } catch (e) {}
-  if ("Notification" in window && Notification.permission === "granted") {
-    try { new Notification(title, { body }); } catch (e) {}
-  }
 }
 
 /* Gmail-style notification bell */
