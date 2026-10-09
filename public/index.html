@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <title>ADCS Assignment Hub – Assignments, Deadlines & Lab Files</title>
+  <meta name="description" content="ADCS Assignment Hub – track assignment deadlines, browse LAB folders and download or contribute files for Visual Programming, Data Structures, Software Engineering, Information Security and all ADCS subjects." />
+  <meta name="keywords" content="ADCS Assignment, assignment hub, deadline tracker, lab assignments, Visual Programming, Data Structures, Calculus, Full Stack Web Development, Information Security, Software Engineering, DSA" />
+  <meta name="author" content="ADCS Assignment Hub" />
+  <link rel="canonical" href="https://adcs-assignment.vercel.app/" />
+  <!-- Open Graph (social / search preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ADCS Assignment Hub" />
+  <meta property="og:title" content="ADCS Assignment Hub – Assignments, Deadlines & Lab Files" />
+  <meta property="og:description" content="Track assignment deadlines, browse LAB folders and contribute files for every ADCS subject in one place." />
+  <meta property="og:url" content="https://adcs-assignment.vercel.app/" />
+  <meta property="og:image" content="https://adcs-assignment.vercel.app/logo.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="541" />
+  <meta property="og:image:alt" content="ADCS Assignment Hub logo" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://adcs-assignment.vercel.app/logo.png" />
+  <meta name="twitter:title" content="ADCS Assignment Hub" />
+  <meta name="twitter:description" content="Track assignment deadlines, browse LAB folders and contribute files for every ADCS subject in one place." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#3b82f6" />
+  <meta name="google-site-verification" content="fRUkeagAHGPicVXebm4rPp3o3f6GIEmX7MR1UT0CHlM" />
+  <!-- Structured data: tells Google the site name is "ADCS Assignment Hub" (not Vercel) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ADCS Assignment Hub",
+    "alternateName": "ADCS Assignment",
+    "url": "https://adcs-assignment.vercel.app/",
+    "description": "Track assignment deadlines, browse LAB folders and contribute files for every ADCS subject in one place.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ADCS Assignment Hub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://adcs-assignment.vercel.app/logo.png"
+      }
+    }
+  }
+  </script>
+  <!-- Structured data: WebPage + subject list + FAQ (feeds Google & AI answers) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "ADCS Assignment Hub",
+    "alternateName": "ADCSAssignment",
+    "url": "https://adcs-assignment.vercel.app/",
+    "inLanguage": "en",
+    "description": "ADCS Assignment portal for deadlines, lab folders and assignment files for ADCS-III-A students.",
+    "primaryImageOfPage": { "@type": "ImageObject", "url": "https://adcs-assignment.vercel.app/logo.png" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adcs-assignment.vercel.app/" }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "ADCS Assignment subjects",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ADCS Assignment Deadlines" },
+      { "@type": "ListItem", "position": 2, "name": "Visual Programming (Lab)" },
+      { "@type": "ListItem", "position": 3, "name": "Visual Programming (Theory)" },
+      { "@type": "ListItem", "position": 4, "name": "Data Structures (Lab)" },
+      { "@type": "ListItem", "position": 5, "name": "Calculus and Analytical Geometry" },
+      { "@type": "ListItem", "position": 6, "name": "Full Stack Web Development" },
+      { "@type": "ListItem", "position": 7, "name": "CS-215L Information Security" },
+      { "@type": "ListItem", "position": 8, "name": "Theory Information Security" },
+      { "@type": "ListItem", "position": 9, "name": "DSA F-26" },
+      { "@type": "ListItem", "position": 10, "name": "CS-371 Software Engineering" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is ADCS Assignment Hub?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ADCS Assignment Hub is a free online portal for ADCS-III-A students to track assignment deadlines, open LAB folders for each subject, and download or contribute assignment files (PDF/DOC/DOCX) in one place." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I check ADCS assignment deadlines?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Open the ADCS ASSIGNMENT DEADLINE card on the home page and click Show Details. The table lists every subject with its deadline, current date, status (Open/Closed), days left, and whether the file has been uploaded to the website." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I upload an assignment file?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Click View Assignments on a subject card, choose a LAB folder (LAB 1 to LAB 10), tap the plus (+) Contribute button, select a PDF, DOC or DOCX file and press Upload. The file is saved inside that subject and folder and a notification is sent to all users." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which subjects are covered by ADCS Assignment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ADCS Assignment covers Visual Programming (Lab and Theory), Data Structures Lab, Calculus and Analytical Geometry, Full Stack Web Development, CS-215L Information Security, Theory Information Security, DSA F-26 and CS-371 Software Engineering." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I get notified when a new assignment is uploaded?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. ADCS Assignment Hub sends free push notifications to every device that allows them, plus an in-app notification bell, so students know as soon as a new assignment file or deadline update is posted." }
+      }
+    ]
+  }
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<!-- APP -->
+<button id="notifBell" title="Notifications">🔔<span id="notifBadge"></span></button>
+<div id="notifPanel"><h4>📬 Notifications</h4><div id="notifList"></div></div>
+<div id="appPage">
+
+  <!-- HOME -->
+  <div id="homePage" class="page active">
+    <div class="app-header">
+      <h1>📄 ADCS Assignment Hub</h1>
+      <p>Track deadlines, open a subject, pick a LAB folder and use <b>+</b> to contribute files.</p>
+    </div>
+    <div class="cards-grid">
+      <!-- DEADLINE CARD — FIRST -->
+      <div class="card" data-subject="DEADLINE" style="--card-accent:#f87171">
+        <svg class="pdf-icon" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="lgDL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f472b6"/><stop offset="1" stop-color="#be185d"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lgDL)"/><ellipse cx="24" cy="9" rx="16" ry="5" fill="rgba(255,255,255,0.22)"/><text x="24" y="30" font-size="15" font-weight="800" fill="#fff" text-anchor="middle" font-family="'DM Mono',monospace">DL</text></svg>
+        <div class="card-title">ADCS ASSIGNMENT DEADLINE</div>
+        <button class="card-btn deadline-btn" onclick="showDeadlinePage()">Show Details</button>
+      </div>
+
+      <div class="card" data-subject="Visual Programming (Lab)" style="--card-accent:#a855f7">
+        <svg class="pdf-icon" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="lgVPL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#7e22ce"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lgVPL)"/><ellipse cx="24" cy="9" rx="16" ry="5" fill="rgba(255,255,255,0.22)"/><text x="24" y="30" font-size="14" font-weight="800" fill="#fff" text-anchor="middle" font-family="'DM Mono',monospace">VPL</text></svg>
+        <div class="card-title">Visual Programming (Lab)</div>
+        <div class="card-sub">ADCS - III · Qadeer Yasin</div>
+        <button class="card-btn" data-action="open">View Assignments</button>
+      </div>
+      <div class="card" data-subject="Visual Programming (Theory)" style="--card-accent:#4ade80">
+        <svg class="pdf-icon" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="lgVPT" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ade80"/><stop offset="1" stop-color="#15803d"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lgVPT)"/><ellipse cx="24" cy="9" rx="16" ry="5" fill="rgba(255,255,255,0.22)"/><text x="24" y="30" font-size="14" font-weight="800" fill="#fff" text-anchor="middle" font-family="'DM Mono',monospace">VPT</text></svg>
+        <div class="card-title">Visual Programming (Theory)</div>
+        <div class="card-sub">ADCS -III · Qadeer Yasin</div>
+        <button class="card-btn" data-action="open">View Assignments</button>
+      </div>
+      <div class="card" data-subject="Data-Structures(Lab.)" style="--card-accent:#94a3b8">
+        <svg class="pdf-icon" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="lgDSL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#94a3b8"/><stop offset="1" stop-color="#334155"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lgDSL)"/><ellipse cx="24" cy="9" rx="16" ry="5" fill="rgba(255,255,255,0.22)"/><text x="24" y="30" font-size="14" font-weight="800" fill="#fff" text-anchor="middle" font-family="'DM Mono',monospace">DSL</text></svg>
+        <div class="card-title">Data-Structures(Lab.)</div>
+        <div class="card-sub">ADSCS-III-A · Shamsa Kanwal</div>
+        <button class="card-btn" data-action="open">View Assignments</button>
+      </div>
+      <div class="card" data-subject="Calculus & Analytical Geometry" style="--card-accent:#2dd4bf">
+        <svg class="pdf-icon" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="lgCAG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#0f766e"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lgCAG)"/><ellipse cx="24" cy="9" rx="16" ry="5" fill="rgba(255,255,255,0.22)"/><text x="24" y="30" font-size="14" font-weight="800" fill="#fff" text-anchor="middle" font-family="'DM Mono',monospace">CAG</text></svg>
+        <div class="card-title">Calculus & Analytical Geometry</div>
+        <div class="card-sub">ADSCS_3A · Yasir Arif</div>
+        <button class="card-btn" data-action="open">View Assignments</button>
+      </div>
+      <div class="card" data-subject="Full Stack Web Development" style="--card-accent:#22d3ee">
+        <svg class="pdf-icon" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="lgFSWD" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lgFSWD)"/><ellipse cx="24" cy="9" rx="16" ry="5" fill="rgba(255,255,255,0.22)"/><text x="24" y="30" font-size="11" font-weight="800" fill="#fff" text-anchor="middle" font-family="'DM Mono',monospace">FSWD</text></svg>
+        <div class="card-title">Full Stack Web Development</div>
+        <div class="card-sub">ADSCS-III-A · Raja Faisal Umar</div>
+        <button class="card-btn" data-action="open">View Assignments</button>
+      </div>
+      <div class="card" data-subject="CS-215L-Information Security" style="--card-accent:#c084fc">
+        <svg class="pdf-icon" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="lgIS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#6d28d9"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lgIS)"/><ellipse cx="24" cy="9" rx="16" ry="5" fill="rgba(255,255,255,0.22)"/><text x="24" y="30" font-size="15" font-weight="800" fill="#fff" text-anchor="middle" font-family="'DM Mono',monospace">IS</text></svg>
+        <div class="card-title">CS-215L-Information Security</div>
+        <div class="card-sub">ADCS-III-A · Muhammad Ayaz Khan</div>
+        <button class="card-btn" data-action="open">View Assignments</button>
+      </div>
+      <div class="card" data-subject="Theory Information Security" style="--card-accent:#a78bfa">
+        <svg class="pdf-icon" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="lgTIS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#5b21b6"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lgTIS)"/><ellipse cx="24" cy="9" rx="16" ry="5" fill="rgba(255,255,255,0.22)"/><text x="24" y="30" font-size="14" font-weight="800" fill="#fff" text-anchor="middle" font-family="'DM Mono',monospace">TIS</text></svg>
+        <div class="card-title">Theory Information Security</div>
+        <div class="card-sub">ADCS-III-A · Muhammad Ayaz Khan</div>
+        <button class="card-btn" data-action="open">View Assignments</button>
+      </div>
+      <div class="card" data-subject="DSA F-26" style="--card-accent:#14b8a6">
+        <svg class="pdf-icon" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="lgDSA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lgDSA)"/><ellipse cx="24" cy="9" rx="16" ry="5" fill="rgba(255,255,255,0.22)"/><text x="24" y="30" font-size="14" font-weight="800" fill="#fff" text-anchor="middle" font-family="'DM Mono',monospace">DSA</text></svg>
+        <div class="card-title">DSA F-26</div>
+        <div class="card-sub">ADCS 3rd A · Muhammad Bilal Khan</div>
+        <button class="card-btn" data-action="open">View Assignments</button>
+      </div>
+      <div class="card" data-subject="CS-371 Software Engineering" style="--card-accent:#60a5fa">
+        <svg class="pdf-icon" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="lgSE" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lgSE)"/><ellipse cx="24" cy="9" rx="16" ry="5" fill="rgba(255,255,255,0.22)"/><text x="24" y="30" font-size="15" font-weight="800" fill="#fff" text-anchor="middle" font-family="'DM Mono',monospace">SE</text></svg>
+        <div class="card-title">CS-371 Software Engineering</div>
+        <div class="card-sub">ADCS III A · Dr. Sumaira Farid</div>
+        <button class="card-btn" data-action="open">View Assignments</button>
+      </div>
+    </div>
+
+    <!-- SEO CONTENT (visible, crawlable text) -->
+    <main class="seo-content">
+      <section aria-labelledby="aboutH2">
+        <h2 id="aboutH2">About ADCS Assignment Hub</h2>
+        <p><b>ADCS Assignment Hub</b> (also searched as <i>ADCS Assignment</i> or <i>ADCSAssignment</i>) is a free
+        portal built for <b>ADCS-III-A</b> students to manage every <b>ADCS assignment</b> in one place.
+        Track <b>assignment deadlines</b> with live countdowns, open <b>LAB 1 – LAB 10 folders</b> for each subject,
+        and download or contribute assignment files (PDF, DOC, DOCX) shared by classmates.</p>
+        <p>The portal covers all semester subjects: <b>Visual Programming</b> (Lab &amp; Theory),
+        <b>Data Structures Lab</b>, <b>Calculus &amp; Analytical Geometry</b>, <b>Full Stack Web Development</b>,
+        <b>CS-215L Information Security</b>, <b>Theory of Information Security</b>, <b>DSA F-26</b> and
+        <b>CS-371 Software Engineering</b> — each with teacher names, deadline status and upload tracking.</p>
+      </section>
+
+      <section aria-labelledby="faqH2">
+        <h2 id="faqH2">Frequently Asked Questions</h2>
+        <details class="faq-item" open>
+          <summary>What is ADCS Assignment Hub?</summary>
+          <p>ADCS Assignment Hub is a free online portal for ADCS-III-A students to track assignment deadlines,
+          open LAB folders for each subject, and download or contribute assignment files (PDF/DOC/DOCX) in one place.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I check ADCS assignment deadlines?</summary>
+          <p>Open the <b>ADCS ASSIGNMENT DEADLINE</b> card on the home page and click <b>Show Details</b>.
+          The table lists every subject with its deadline, current date, status (Open/Closed), days left,
+          and whether the file has been uploaded to the website.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I upload an assignment file?</summary>
+          <p>Click <b>View Assignments</b> on a subject card, choose a LAB folder (LAB 1 to LAB 10), tap the
+          <b>＋ Contribute</b> button, select a PDF, DOC or DOCX file and press Upload. The file is saved inside
+          that subject and folder, and a notification is sent to all users.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Which subjects are covered by ADCS Assignment?</summary>
+          <p>Visual Programming (Lab &amp; Theory), Data Structures Lab, Calculus &amp; Analytical Geometry,
+          Full Stack Web Development, CS-215L Information Security, Theory Information Security, DSA F-26
+          and CS-371 Software Engineering.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I get notified when a new assignment is uploaded?</summary>
+          <p>Yes. ADCS Assignment Hub sends free push notifications to every device that allows them, plus an
+          in-app notification bell, so students know as soon as a new assignment file or deadline update is posted.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="app-footer">© 2026 ADCS Assignment Hub</footer>
+  </div>
+
+  <!-- DEADLINE PAGE -->
+  <div id="deadlinePage" class="page">
+    <div class="dl-header">
+      <div class="dl-header-left">
+        <button class="back-btn" onclick="goHome()">← Back</button>
+        <h2>Assignment Deadlines</h2>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;" id="adminHeaderArea">
+        <button class="admin-update-btn" onclick="openAuthOverlay()">🔐 Update ADMIN</button>
+      </div>
+    </div>
+
+    <div class="dl-stats" id="statsRow"></div>
+
+    <div class="dl-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Open</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div>Closed</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--amber)"></div>Due Today</div>
+    </div>
+
+    <div class="edit-panel" id="editPanel" style="display:none; margin-top:18px;">
+      <div class="edit-box">
+        <h4>✏️ ADMIN — Edit Deadlines, Current Date &amp; Upload Status</h4>
+        <div id="editGrid" class="edit-grid"></div>
+        <div class="edit-actions">
+          <button class="save-btn" onclick="saveEdits()">💾 Save Changes</button>
+          <button class="cancel-edit-btn" onclick="closeEditPanel()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dl-table-wrap">
+      <table class="dl-table">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Deadline</th>
+            <th>Current Date</th>
+            <th>Status</th>
+            <th>Days Left</th>
+            <th>Uploaded on Website</th>
+          </tr>
+        </thead>
+        <tbody id="deadlineTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ASSIGNMENTS MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <h3 id="modalTitle">Subject Assignments</h3>
+          <div class="muted">Select a folder to open</div>
+        </div>
+        <button class="close-btn" onclick="closeModal()">✕</button>
+      </div>
+      <div class="pdf-list" id="pdfList"></div>
+      <h4 style="margin-top:18px;font-size:14px;color:#93c5fd;display:none;" id="contribTitle">📁 Folder Contents</h4>
+      <div class="pdf-list" id="contribList" style="margin-top:10px;"></div>
+      <div class="modal-footer">
+        <button class="sec-btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTRIBUTE UPLOAD OVERLAY -->
+  <div class="overlay" id="uploadOverlay">
+    <div class="overlay-box">
+      <h3>📤 Contribute</h3>
+      <p>Upload your PDF or DOCX — it is saved in this folder.</p>
+
+      <p id="uploadTarget" style="font-size:13px;color:#93c5fd;margin-bottom:10px;font-family:'DM Mono',monospace;"></p>
+      <input type="file" id="uploadFile" accept=".pdf,.doc,.docx" style="padding:9px 0;" />
+      <div id="uploadMsg" style="font-size:12px;min-height:16px;"></div>
+      <div class="overlay-actions">
+        <button class="btn-confirm" onclick="doUpload()">Upload</button>
+        <button class="btn-cancel"  onclick="closeUploadOverlay()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN AUTH OVERLAY -->
+  <div class="overlay" id="authOverlay">
+    <div class="overlay-box">
+      <h3>🔐 Admin Authentication</h3>
+      <p>Enter the admin password to edit deadlines.</p>
+      <input type="password" id="adminPassInput" placeholder="Admin password"
+             onkeydown="if(event.key==='Enter') confirmAuth()" />
+      <div id="authMsg"></div>
+      <div class="overlay-actions">
+        <button class="btn-confirm" onclick="confirmAuth()">Confirm</button>
+        <button class="btn-cancel"  onclick="closeAuthOverlay()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

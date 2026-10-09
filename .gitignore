@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# environment secrets — NEVER commit
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+
+# uploaded files (stored in MongoDB GridFS)
+uploads/
+
+# vercel
+.vercel/
+
+# misc
+.DS_Store
+cleanup.js
